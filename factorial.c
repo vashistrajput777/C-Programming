@@ -1,20 +1,14 @@
+//WAP to print the factorial of given number
 #include <stdio.h>
 
-int factorial(int n){
-    if(n==1){
-        return 1;
+int main(){
+    int a;
+    printf("Enter a number: ");
+    scanf("%d", &a);
+    double b = 1;
+    for(int i = 1; i <= a; i++){
+        b = b * i;
     }
-    return n*factorial(n-1);
+    printf("Factorial of %d is %.2f",a , b);
+    return 0;
 }
-
-int main(void){
-
-    int n = 5;
-    if(n <= 0){
-        printf("!! not valid !!");
-        return 0;
-    }
-    printf("%d! = %d",n,factorial(n));
-}
-
-
