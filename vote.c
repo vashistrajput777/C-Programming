@@ -1,23 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
-int main(void)
-{
-    char country;
+int main(){
+    char c [20];
     int age;
-    printf("are you form india y/n:");
-    scanf("%c",&country);
-    if(country == 'Y' || country == 'y'){
-        printf("How old are you?");
-        scanf("%i",&age);
-        if (age >= 18){
-            printf("you are elegible for vote\n");
+    printf("Enter your citizenship: ");
+    scanf("%s", &c);
+    if(strcmp(c, "Indian")==0 || strcmp(c , "indian")==0)
+    {
+        printf("Enter your age: ");
+        scanf("%d", &age);
+        if(age>=18,age<=120)
+        {
+            printf("You are eligible to vote\n");
         }
         else{
-            printf("you are not elegible for vote\n");
+            printf("You are not eligible to vote\n");
         }
-    } 
+    }
     else{
-        printf("you are not elegible for vote\n");
-    }  
+        printf("You are not eligible to vote due to citizenship\n");
+    }
     return 0;
 }

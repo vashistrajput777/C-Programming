@@ -1,41 +1,37 @@
+// switch only for one comparison
 #include <stdio.h>
 
-int main()
-{
-    int day;
-    printf("Enter a number between 1 to 7:");
-    scanf("%d", &day);
-    while (day < 1 || day > 7)
-    {
-        printf("Invalid input please enter a number between 1 to 7:");
+int main(){
+        int day;
         scanf("%d", &day);
-    }
-    switch (day)
-    { // in swith you can nonot use && or ||  (arithmetic oparator)
-        case 1:
-            printf("Monday"); break;
-        case 2:
+        switch(day)
+        {
+            case 1 :
+            printf("Monday");
+            break;
+
+            case 2 :
             printf("Tuesday");
             break;
-        case 3:
+            
+            case 3 :
             printf("Wednesday");
             break;
-        case 4:
+            
+            case 4 :
             printf("Thursday");
             break;
-        case 5:
+
+            case 5 :
             printf("Friday");
             break;
-        case 6:
+
+            case 6 :
             printf("Saturday");
             break;
-        case 7:
+
+            default:
             printf("Sunday");
-            break;
-            
-        default:
-            // this will never be executed because of the while loop above
-            printf("Invalid input");
-    }
+        }
     return 0;
 }
