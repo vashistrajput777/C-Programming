@@ -1,25 +1,15 @@
 #include <stdio.h>
-#include <math.h>
 
-int nth(int k,int n){
+int main() {
+    int a, r = 0;
+    printf("Enter a number to reverse: ");
+    scanf("%d", &a);
 
-    return ( ( (k % (int)pow(10,n)) - (k % (int)pow(10,n-1)) )/ pow(10,n-1) );
-}
-
-int main(void){
-
-    int k = 45;
-    int temp2 = k;
-    int len_of_k = 0;
-    
-    while (temp2 != 0){
-        temp2 /= 10;
-        len_of_k++;
+    while (a) {
+        r = r * 10 + a % 10;
+        a = a / 10;
     }
-    for(int i = 1; i <= len_of_k;i++){
 
-        int temp = nth(k,i);
-        printf("%d",temp);
-    }
+    printf("Reversed number = %d\n", r);
     return 0;
 }
